@@ -4,7 +4,7 @@ Creating a nodejs application docker container with express.
 ```
 $ docker-compose up -d
 Creating network "nodejs-express_node-net" with the default driver
-Pulling node (jisjo/nodejs_express_webapp:v1)...
+Pulling node (jisjo/nodejs_express_webapp:latest)...
 v1: Pulling from jisjo/nodejs_express_webapp
 97518928ae5f: Pull complete
 a2af70dcde7d: Pull complete
@@ -27,18 +27,20 @@ df4586f96bb8   jisjo/nodejs_express_webapp:v1   "node server.js"   About a minut
 
 > Test URL : http://<host_ip_addr>
 
-```curl
+![SCREENSHOT-NODEJS-EXPRESS](https://github.com/Jisjo/Docker_nodejs-express_webapp/blob/main/Screenshot.png)
+
+```
 $ curl -i localhost
 HTTP/1.1 200 OK
 X-Powered-By: Express
 Content-Type: text/html; charset=utf-8
-Content-Length: 11
-ETag: W/"b-Ck1VqNd45QIvq3AZd8XYQLvEhtA"
-Date: Wed, 22 Dec 2021 04:50:48 GMT
+Content-Length: 70
+ETag: W/"46-hZ7zYXiNeJG/XJoqKzh9vPTGmYs"
+Date: Wed, 22 Dec 2021 05:04:48 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 
-Hello World
+<h1><center>This is a nodejs-express Hello World program</center></h1>
 ```
 
 ```
