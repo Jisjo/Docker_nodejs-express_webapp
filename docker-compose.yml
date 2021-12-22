@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  node:
+    image: jisjo/nodejs_express_webapp:v1
+    container_name: node
+    ports:
+      - 80:8080
+    networks:
+      - node-net
+    restart: always
+networks: 
+  node-net:
