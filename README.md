@@ -1,6 +1,11 @@
 # Docker_nodejs-express_webapp
 Creating a nodejs application docker container with express.
 
+## About nodejs express
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications. It facilitates the rapid development of Node based Web applications
+
+----
+
 ```
 $ docker-compose up -d
 Creating network "nodejs-express_node-net" with the default driver
