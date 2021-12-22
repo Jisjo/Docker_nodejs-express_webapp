@@ -1,2 +1,49 @@
 # Docker_nodejs-express_webapp
 Creating a nodejs application docker container with express.
+
+```
+$ docker-compose up -d
+Creating network "nodejs-express_node-net" with the default driver
+Pulling node (jisjo/nodejs_express_webapp:v1)...
+v1: Pulling from jisjo/nodejs_express_webapp
+97518928ae5f: Pull complete
+a2af70dcde7d: Pull complete
+80e05fd95fdd: Pull complete
+1391c8a04394: Pull complete
+60a5a81a269b: Pull complete
+70e3f13d3bff: Pull complete
+3c3df69befb8: Pull complete
+65859b17c0c6: Pull complete
+Digest: sha256:11f3636cf58a8b9fc68cb8f5efa80bd45fef23801cc065124ff55c54f61fab1b
+Status: Downloaded newer image for jisjo/nodejs_express_webapp:v1
+Creating node ... done
+```
+
+```
+$ docker container ps
+CONTAINER ID   IMAGE                            COMMAND            CREATED              STATUS              PORTS                                   NAMES
+df4586f96bb8   jisjo/nodejs_express_webapp:v1   "node server.js"   About a minute ago   Up About a minute   0.0.0.0:80->8080/tcp, :::80->8080/tcp   node
+```
+
+> Test URL : http://<host_ip_addr>
+
+```curl
+$ curl -i localhost
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 11
+ETag: W/"b-Ck1VqNd45QIvq3AZd8XYQLvEhtA"
+Date: Wed, 22 Dec 2021 04:50:48 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+Hello World
+```
+
+```
+$ docker-compose down -v
+Stopping node ... done
+Removing node ... done
+Removing network day-7-nodejs-express_node-net
+```
